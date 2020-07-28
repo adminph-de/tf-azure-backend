@@ -74,7 +74,7 @@ terraform apply -auto-approve
 
 [LinkedIN](https://www.linkedin.com/in/patrickhayo/?locale=en_US) - [Twitter](https://twitter.com/N00ky2010) - [Email](patrick.hayo@flsmidth.com)
 
-Project Link: [https://github.com/adminph-de/repo](https://github.com/adminph-de/repo)
+Project Link: [https://github.com/adminph-de/tf-azure-backend](https://github.com/adminph-de/tf-azure-backend)
 
 <!-- REFERENZES -->
 ## Referenzes
