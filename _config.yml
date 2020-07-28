@@ -1,7 +1,7 @@
 theme: jekyll-theme-slate
 lsi: false
 safe: true
-source: https://github.com/adminph-de/tf-azure-backend
+source: /tf-azure-backend
 incremental: false
 highlighter: rouge
 gist:
