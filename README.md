@@ -9,7 +9,7 @@
 <br />
 <p align="center">
   <a href="https://github.com/adminph-de/tf-azure-backend">
-    <img src="images/logo.png" alt="Terraform & Azure">
+    <img src="/images/logo.png" alt="Terraform & Azure">
   </a>
   <h3 align="center">Deploy a Remote Backend to Azure with Terraform</h3>
 </p>
