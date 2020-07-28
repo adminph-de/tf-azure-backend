@@ -8,7 +8,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <p align="center">
-  <a href="https://github.com/adminph-de/repo">
+  <a href="https://github.com/adminph-de/tf-azure-backend">
     <img src=".images/logo.png" alt="Logo">
   </a>
   <h3 align="center">Deploy a Remote Backend to Azure with Terraform</h3>
