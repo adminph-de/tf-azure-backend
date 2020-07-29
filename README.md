@@ -37,7 +37,7 @@ git clone https://github.com/adminph-de/tf-azure-backend.git
 Create an addinal file in your cloned repo, called: ```azurecert.conf``` with your spezific ```TENANT_ID```, ```SUBSCRIPTION_ID``` and a ```Azure Service Principal (SPN)``` ```CLIENT_ID``` and ```CLIENT_SECRET``` variable. Find the HowToBuild a SPN in the referenzes below.
 
 Content of the file:
-```
+```sh
 ARM_TENANT_ID="0000000-0000-0000-0000-000000000000"
 ARM_SUBSCRIPTION_ID="0000000-0000-0000-0000-000000000000"
 ARM_CLIENT_ID="0000000-0000-0000-0000-000000000000"
@@ -46,19 +46,19 @@ ARM_CLIENT_SECRET="0000000-0000-0000-0000-000000000000"
 
 3. Terraform Variables file: 
 Create a ```terraform.tfvars``` file in your cloned repo with the variable values like this:
-```
+```sh
 project     = "Remote Backend for tfstate files"
 environment = "PROD"
 location    = "westus2"
 ```
 
 4. Run Terraform Init:
-```
+```sh
 terraform init -backend-config=azurecreds.conf
 ```
 
 5. Run Terraform Plan:
-```
+```sh
 terraform plan
 ```
 
