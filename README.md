@@ -53,7 +53,7 @@ location    = "westus2"
 ```
 
 4. Run Terraform Init:
-```sh
+```bash
 terraform init -backend-config=azurecreds.conf
 ```
 
