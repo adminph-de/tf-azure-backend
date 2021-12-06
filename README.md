@@ -17,26 +17,42 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [About the Project](#about-the-project)
-* [Deployment](#deployment)
-* [Contact](#contact)
-* [Referenzes](#referenzes)
+- [Table of Contents](#table-of-contents)
+- [About The Project](#about-the-project)
+- [Deployment](#deployment)
+  - [Clone the repo](#clone-the-repo)
+  - [Azure Credential file](#azure-credential-file)
+  - [Terraform Variables file](#terraform-variables-file)
+  - [Run Terraform Init](#run-terraform-init)
+  - [Run Terraform Plan](#run-terraform-plan)
+  - [Run Terraform Apply](#run-terraform-apply)
+- [Contact](#contact)
+- [Referenzes](#referenzes)
 
 ## About The Project
 
 Terraform is perfect for deploying a StorageAccount in Azure to use it as a [Terraform Remote Backend](https://www.terraform.io/docs/backends/types/remote.html) to store your future tfstate files. Part of the repository is a folder called ```.devcontainer```; it contains the Docker container configuration to use it with [Microsoft Visial Studio Code](https://code.visualstudio.com/download) and the [Remote-Container](https://code.visualstudio.com/docs/remote/containers) technologies. [Terraform](https://www.terraform.io/downloads.html), and [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) got pre- installed to run the container. You need apart of [Microsoft Visial Studio Code](https://code.visualstudio.com/download) in addition to run the container [Docker Desktop](https://www.docker.com/get-started) installed on your PC, MAC or Linux to use [Remote-Container](https://code.visualstudio.com/docs/remote/containers). It is only optional and not required to run the Terraform scripts.
 
+## Deployment
 
-### Deployment
- 
-1. Clone the repo
+### Clone the repo
+
 ```sh
 git clone https://github.com/adminph-de/tf-azure-backend.git
 ```
-2. Azure Credential file:
+
+### Azure Credential file
+
+Switch to the ```tf-azure-backend/terraform``` folder
+
+```bash
+$ cd terraform
+```
+
 Create an addinal file in your cloned repo, called: ```azurecert.conf``` with your spezific ```TENANT_ID```, ```SUBSCRIPTION_ID``` and a ```Azure Service Principal (SPN)``` ```CLIENT_ID``` and ```CLIENT_SECRET``` variable. Find the HowToBuild a SPN in the referenzes below.
 
-Content of the file:
+Content of the file
+
 ```sh
 ARM_TENANT_ID="0000000-0000-0000-0000-000000000000"
 ARM_SUBSCRIPTION_ID="0000000-0000-0000-0000-000000000000"
@@ -44,30 +60,33 @@ ARM_CLIENT_ID="0000000-0000-0000-0000-000000000000"
 ARM_CLIENT_SECRET="0000000-0000-0000-0000-000000000000"
 ```
 
-3. Terraform Variables file: 
+### Terraform Variables file
+
 Create a ```terraform.tfvars``` file in your cloned repo with the variable values like this:
+
 ```sh
 project     = "Remote Backend for tfstate files"
 environment = "PROD"
 location    = "westus2"
 ```
 
-4. Run Terraform Init:
+### Run Terraform Init
+
 ```bash
 terraform init -backend-config=azurecreds.conf
 ```
 
-5. Run Terraform Plan:
+### Run Terraform Plan
+
 ```sh
 terraform plan
 ```
 
-6. Run Terraform Apply:
-```
-terraform apply -auto-approve
-```
+### Run Terraform Apply
 
-7. Check your result in your Azure Subscription
+```terraform apply -auto-approve```
+
+1. Check your result in your Azure Subscription
 
 <!-- CONTACT -->
 ## Contact
