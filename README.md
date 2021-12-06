@@ -17,15 +17,15 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [About the Project](#about-the-project)
-* [Deployment](#deployment)
-* [Contact](#contact)
-* [Referenzes](#referenzes)
+- [Table of Contents](#table-of-contents)
+- [About The Project](#about-the-project)
+  - [Deployment](#deployment)
+- [Contact](#contact)
+- [Referenzes](#referenzes)
 
 ## About The Project
 
 Terraform is perfect for deploying a StorageAccount in Azure to use it as a [Terraform Remote Backend](https://www.terraform.io/docs/backends/types/remote.html) to store your future tfstate files. Part of the repository is a folder called ```.devcontainer```; it contains the Docker container configuration to use it with [Microsoft Visial Studio Code](https://code.visualstudio.com/download) and the [Remote-Container](https://code.visualstudio.com/docs/remote/containers) technologies. [Terraform](https://www.terraform.io/downloads.html), and [Azure CLI](https://docs.microsoft.com/en-us/cli/azure/install-azure-cli?view=azure-cli-latest) got pre- installed to run the container. You need apart of [Microsoft Visial Studio Code](https://code.visualstudio.com/download) in addition to run the container [Docker Desktop](https://www.docker.com/get-started) installed on your PC, MAC or Linux to use [Remote-Container](https://code.visualstudio.com/docs/remote/containers). It is only optional and not required to run the Terraform scripts.
-
 
 ### Deployment
  
@@ -35,6 +35,8 @@ git clone https://github.com/adminph-de/tf-azure-backend.git
 ```
 2. Azure Credential file:
 Create an addinal file in your cloned repo, called: ```azurecert.conf``` with your spezific ```TENANT_ID```, ```SUBSCRIPTION_ID``` and a ```Azure Service Principal (SPN)``` ```CLIENT_ID``` and ```CLIENT_SECRET``` variable. Find the HowToBuild a SPN in the referenzes below.
+
+Switch to the ```Terraform``` folder.
 
 Content of the file:
 ```sh
