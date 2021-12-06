@@ -8,7 +8,7 @@ resource "random_string" "tf-name" {
 }
 # Create a Resource Group for the Terraform State File
 resource "azurerm_resource_group" "state-rg" {
-  name     = "terraform-tfstate-${lower(var.location)}"
+  name     = "rg-terraform-tfstate-${lower(var.location)}"
   location = var.location
   lifecycle {
     prevent_destroy = true
